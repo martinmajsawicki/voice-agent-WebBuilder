@@ -54,13 +54,13 @@ def build_prompt(page_content, photo_filenames):
     if photo_filenames:
         photo_list = "\n".join([f"- photos/{f}" for f in photo_filenames])
         photos_section = f"""
-LIVE PHOTOS (uploaded during the event):
-Display a photo gallery at the top of the page. Files are in photos/:
+PHOTOS (uploaded live):
+Include these photos on the page. Files are in photos/:
 {photo_list}
 
 Use <img src="photos/FILENAME"> for each photo.
-Display in a grid with rounded corners, below the title.
-Add caption: "Live photos — uploaded during the event".
+Integrate them naturally into the page design — gallery, hero background, inline, cards —
+whatever fits the style best.
 """
 
     return f"""Create a COMPLETE HTML page based on the description below.
@@ -70,30 +70,30 @@ PAGE DESCRIPTION (collected from a voice conversation):
 
 {photos_section}
 
+VISUAL DESIGN:
+The description above may contain style hints — references, associations, moods, color ideas,
+style names (e.g. "like Bauhaus", "autumn colors", "retro 80s", "minimal like Apple",
+"newspaper style", "warm and cozy"). Use these hints to design the ENTIRE visual identity:
+- Choose a color palette that matches the mood/reference
+- Choose fonts from Google Fonts that fit the style
+- Design the layout, spacing, and visual hierarchy accordingly
+- Be creative — interpret the style hints like a designer would
+
+If NO style hints are given, use a clean, readable default with good contrast and typography.
+
 CONTENT STYLE:
 - Informational, professional, factual
 - NO marketing language, NO hype, NO self-promotion
-- NO words like "revolutionary", "groundbreaking", "innovative", "cutting-edge"
 - Write like a journalist or encyclopedia — present facts clearly
 - Let the content speak for itself
 
 TECHNICAL REQUIREMENTS:
 - Use Tailwind CSS (CDN: https://cdn.tailwindcss.com)
-- Dark theme: background #1A1A1A, text #FAFAF5, accent #E8B931
-- Font: Inter (Google Fonts)
+- Use Google Fonts (choose fonts that match the style)
 - Responsive — mobile first
-- Style: modern, clean, professional
-- Single HTML file, everything inline
-- At the very bottom, footer with TWO lines:
-  Line 1: "This page was generated live by a voice AI agent"
-  Line 2: "Generated: {timestamp}" (use this exact timestamp)
-
-PAGE STRUCTURE:
-1. Header with page title
-2. Photo gallery (if photos available)
-3. Main content — organized by topic from the description
-4. Additional details (if provided)
-5. Footer with generation timestamp
+- Single HTML file, everything inline (styles, scripts, fonts)
+- At the very bottom, a footer with:
+  "Generated: {timestamp}" (use this exact timestamp)
 
 IMPORTANT: Return a COMPLETE index.html file, ready to save.
 No comments, no explanations, no markdown code fences — ONLY raw HTML.
