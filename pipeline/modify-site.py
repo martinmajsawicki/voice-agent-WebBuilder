@@ -65,30 +65,35 @@ Add caption: "Live photos — uploaded during the event".
 
     return f"""Create a COMPLETE HTML page based on the description below.
 
-PAGE DESCRIPTION (collected from a live voice conversation):
+PAGE DESCRIPTION (collected from a voice conversation):
 {page_content}
 
 {photos_section}
+
+CONTENT STYLE:
+- Informational, professional, factual
+- NO marketing language, NO hype, NO self-promotion
+- NO words like "revolutionary", "groundbreaking", "innovative", "cutting-edge"
+- Write like a journalist or encyclopedia — present facts clearly
+- Let the content speak for itself
 
 TECHNICAL REQUIREMENTS:
 - Use Tailwind CSS (CDN: https://cdn.tailwindcss.com)
 - Dark theme: background #1A1A1A, text #FAFAF5, accent #E8B931
 - Font: Inter (Google Fonts)
 - Responsive — mobile first
-- Style: modern, brutalist, professional
+- Style: modern, clean, professional
 - Single HTML file, everything inline
 - At the very bottom, footer with TWO lines:
-  Line 1: "This page was generated live by an AI voice agent during the event"
+  Line 1: "This page was generated live by a voice AI agent"
   Line 2: "Generated: {timestamp}" (use this exact timestamp)
 
 PAGE STRUCTURE:
-1. Hero with event title and short description
+1. Header with page title
 2. Photo gallery (if photos available)
-3. "About" section — what happened / is happening
-4. Program / agenda (if provided)
-5. Speakers / participants (if provided)
-6. Closing section
-7. Footer with generation info and timestamp
+3. Main content — organized by topic from the description
+4. Additional details (if provided)
+5. Footer with generation timestamp
 
 IMPORTANT: Return a COMPLETE index.html file, ready to save.
 No comments, no explanations, no markdown code fences — ONLY raw HTML.
