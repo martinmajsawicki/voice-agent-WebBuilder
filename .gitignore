@@ -6,11 +6,7 @@ pipeline/.env
 # Pipeline temp files
 pipeline/page-content.json
 
-# Uploaded photos (generated at runtime)
-site/photos/*.jpg
-site/photos/*.jpeg
-site/photos/*.png
-site/photos/*.webp
+# Photos are pushed to repo (needed for Vercel deploy)
 
 # System
 .DS_Store
