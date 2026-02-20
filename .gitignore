@@ -1,0 +1,28 @@
+# API keys and secrets
+pipeline/.env
+*.env
+!.env.example
+
+# Pipeline temp files
+pipeline/page-content.json
+
+# Uploaded photos (generated at runtime)
+site/photos/*.jpg
+site/photos/*.jpeg
+site/photos/*.png
+site/photos/*.webp
+
+# System
+.DS_Store
+__pycache__/
+*.pyc
+
+# Vercel
+.vercel
+
+# IDE
+.vscode/
+.idea/
+
+# ngrok
+ngrok-token.txt
