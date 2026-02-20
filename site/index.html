@@ -1,137 +1,70 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Narzędzie do tworzenia stron internetowych za pomocą głosu</title>
+    <title>Tool Information</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-    </style>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#1A1A1A',
-                        text: '#FAFAF5',
-                        accent: '#E8B931'
+                        'custom-bg': '#1A1A1A',
+                        'custom-text': '#FAFAF5',
+                        'custom-accent': '#E8B931'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif']
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-primary text-text min-h-screen">
-    <div class="container mx-auto px-4 py-8 max-w-4xl">
-        <header class="mb-12">
-            <h1 class="text-3xl md:text-4xl font-bold text-center mb-2">Narzędzie do tworzenia stron internetowych za pomocą głosu</h1>
+<body class="bg-custom-bg text-custom-text font-inter min-h-screen">
+    <div class="max-w-4xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+        <header class="mb-8">
+            <h1 class="text-3xl sm:text-4xl font-bold text-custom-accent mb-4">Tool Information</h1>
         </header>
 
-        <section class="mb-12">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-                <img src="photos/photo-001.jpg" alt="Zdjęcie z wydarzenia" class="w-full h-48 object-cover rounded-lg">
-                <img src="photos/photo-002.jpeg" alt="Zdjęcie z wydarzenia" class="w-full h-48 object-cover rounded-lg">
-                <img src="photos/photo-003.jpeg" alt="Zdjęcie z wydarzenia" class="w-full h-48 object-cover rounded-lg">
+        <section class="mb-8">
+            <div class="mb-6">
+                <p class="text-sm text-gray-400 mb-4">Live photos — uploaded during the event</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <img src="photos/photo-001.jpg" alt="Event photo 1" class="w-full h-64 object-cover rounded-lg">
+                    <img src="photos/photo-002.jpeg" alt="Event photo 2" class="w-full h-64 object-cover rounded-lg">
+                    <img src="photos/photo-003.jpeg" alt="Event photo 3" class="w-full h-64 object-cover rounded-lg">
+                </div>
             </div>
-            <p class="text-center text-sm text-gray-400 italic">Live photos — uploaded during the event</p>
         </section>
 
-        <main class="space-y-8">
-            <section>
-                <h2 class="text-2xl font-semibold mb-4 text-accent">Cel i zastosowanie</h2>
-                <p class="text-lg leading-relaxed mb-4">
-                    Narzędzie umożliwia szybkie tworzenie stron internetowych za pomocą poleceń głosowych. 
-                    Rozwiązanie jest przeznaczone dla osób, które posiadają informacje oraz zdjęcia w urządzeniach mobilnych, 
-                    ale nie mają czasu na tradycyjną pracę przy komputerze.
-                </p>
-            </section>
-
-            <section>
-                <h2 class="text-2xl font-semibold mb-4 text-accent">Grupa docelowa</h2>
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="bg-gray-800 p-6 rounded-lg">
-                        <h3 class="text-xl font-medium mb-3 text-accent">Agenci nieruchomości</h3>
-                        <p class="text-gray-300">
-                            Mogą dyktować opisy ofert nieruchomości, dodawać zdjęcia obiektów i tworzyć 
-                            prezentacje bez konieczności korzystania z klawiatury.
-                        </p>
-                    </div>
-                    <div class="bg-gray-800 p-6 rounded-lg">
-                        <h3 class="text-xl font-medium mb-3 text-accent">Organizatorzy eventów</h3>
-                        <p class="text-gray-300">
-                            Tworzą relacje na żywo z wydarzeń, dokumentują przebieg imprez 
-                            i publikują materiały w czasie rzeczywistym.
-                        </p>
-                    </div>
-                    <div class="bg-gray-800 p-6 rounded-lg">
-                        <h3 class="text-xl font-medium mb-3 text-accent">Handlowcy</h3>
-                        <p class="text-gray-300">
-                            Przygotowują materiały promocyjne między spotkaniami z klientami, 
-                            aktualizują oferty i katalogi produktów.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <h2 class="text-2xl font-semibold mb-4 text-accent">Sposób działania</h2>
-                <div class="bg-gray-800 p-6 rounded-lg">
-                    <div class="grid md:grid-cols-2 gap-8">
-                        <div>
-                            <h3 class="text-lg font-medium mb-3">Tradycyjny proces</h3>
-                            <ul class="space-y-2 text-gray-300">
-                                <li>• Konieczność korzystania z klawiatury</li>
-                                <li>• Potrzeba znajomości programowania</li>
-                                <li>• Długi czas tworzenia treści</li>
-                                <li>• Praca przy komputerze stacjonarnym</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 class="text-lg font-medium mb-3">Nowe rozwiązanie</h3>
-                            <ul class="space-y-2 text-gray-300">
-                                <li>• Głos zastępuje klawiaturę</li>
-                                <li>• Agent AI zastępuje programistę</li>
-                                <li>• Szybkie tworzenie treści</li>
-                                <li>• Praca mobilna z telefonu</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <h2 class="text-2xl font-semibold mb-4 text-accent">Funkcjonalności</h2>
-                <div class="space-y-4">
-                    <div class="flex items-start space-x-4">
-                        <div class="bg-accent w-3 h-3 rounded-full mt-2 flex-shrink-0"></div>
-                        <div>
-                            <h3 class="font-medium mb-1">Rozpoznawanie mowy</h3>
-                            <p class="text-gray-300">Konwersja poleceń głosowych na instrukcje tworzenia strony internetowej</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start space-x-4">
-                        <div class="bg-accent w-3 h-3 rounded-full mt-2 flex-shrink-0"></div>
-                        <div>
-                            <h3 class="font-medium mb-1">Integracja ze zdjęciami</h3>
-                            <p class="text-gray-300">Automatyczne dodawanie zdjęć z urządzeń mobilnych do tworzonej strony</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start space-x-4">
-                        <div class="bg-accent w-3 h-3 rounded-full mt-2 flex-shrink-0"></div>
-                        <div>
-                            <h3 class="font-medium mb-1">Generowanie na żywo</h3>
-                            <p class="text-gray-300">Tworzenie gotowych stron HTML w czasie rzeczywistym podczas dyktowania</p>
-                        </div>
-                    </div>
+        <main class="mb-8">
+            <section class="bg-gray-800 rounded-lg p-6 mb-6">
+                <h2 class="text-2xl font-semibold text-custom-accent mb-4">Author Information</h2>
+                <div class="space-y-3">
+                    <p class="text-custom-text">Tool author: Marcin Sawicki</p>
+                    <p class="text-custom-text">
+                        LinkedIn profile: 
+                        <a href="https://www.linkedin.com/in/msawicki/" 
+                           class="text-custom-accent hover:underline" 
+                           target="_blank" 
+                           rel="noopener noreferrer">
+                            www.linkedin.com/in/msawicki/
+                        </a>
+                    </p>
                 </div>
             </section>
         </main>
 
-        <footer class="mt-16 pt-8 border-t border-gray-700 text-center text-sm text-gray-400">
-            <p>This page was generated live by a voice AI agent</p>
-            <p>Generated: 2026-02-20 10:51:42</p>
+        <footer class="border-t border-gray-700 pt-6 mt-12">
+            <div class="text-center text-gray-400 text-sm">
+                <p>This page was generated live by a voice AI agent</p>
+                <p>Generated: 2026-02-20 10:54:31</p>
+            </div>
         </footer>
     </div>
 </body>
