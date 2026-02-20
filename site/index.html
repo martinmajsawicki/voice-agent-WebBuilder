@@ -1,70 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tool Information</title>
+    <title>Voice AI Agent Tool - Marcin Sawicki</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'custom-bg': '#1A1A1A',
-                        'custom-text': '#FAFAF5',
-                        'custom-accent': '#E8B931'
-                    },
-                    fontFamily: {
-                        'inter': ['Inter', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
 </head>
-<body class="bg-custom-bg text-custom-text font-inter min-h-screen">
-    <div class="max-w-4xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+<body class="bg-[#1A1A1A] text-[#FAFAF5] min-h-screen">
+    <div class="max-w-4xl mx-auto px-4 py-8">
         <header class="mb-8">
-            <h1 class="text-3xl sm:text-4xl font-bold text-custom-accent mb-4">Tool Information</h1>
+            <h1 class="text-3xl md:text-4xl font-semibold mb-4">Voice AI Agent Tool</h1>
+            <p class="text-lg text-gray-300">A prototype tool for voice-driven content generation</p>
         </header>
 
-        <section class="mb-8">
-            <div class="mb-6">
-                <p class="text-sm text-gray-400 mb-4">Live photos — uploaded during the event</p>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <img src="photos/photo-001.jpg" alt="Event photo 1" class="w-full h-64 object-cover rounded-lg">
-                    <img src="photos/photo-002.jpeg" alt="Event photo 2" class="w-full h-64 object-cover rounded-lg">
-                    <img src="photos/photo-003.jpeg" alt="Event photo 3" class="w-full h-64 object-cover rounded-lg">
-                </div>
+        <section class="mb-12">
+            <h2 class="text-xl font-medium mb-4 text-[#E8B931]">Live photos — uploaded during the event</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <img src="photos/photo-001.jpg" alt="Live photo 1" class="w-full h-64 object-cover rounded-lg">
+                <img src="photos/photo-002.jpeg" alt="Live photo 2" class="w-full h-64 object-cover rounded-lg">
+                <img src="photos/photo-003.jpeg" alt="Live photo 3" class="w-full h-64 object-cover rounded-lg">
             </div>
         </section>
 
-        <main class="mb-8">
-            <section class="bg-gray-800 rounded-lg p-6 mb-6">
-                <h2 class="text-2xl font-semibold text-custom-accent mb-4">Author Information</h2>
-                <div class="space-y-3">
-                    <p class="text-custom-text">Tool author: Marcin Sawicki</p>
-                    <p class="text-custom-text">
-                        LinkedIn profile: 
-                        <a href="https://www.linkedin.com/in/msawicki/" 
-                           class="text-custom-accent hover:underline" 
-                           target="_blank" 
-                           rel="noopener noreferrer">
-                            www.linkedin.com/in/msawicki/
-                        </a>
-                    </p>
+        <main class="space-y-8">
+            <section>
+                <h2 class="text-xl font-medium mb-4 text-[#E8B931]">About the Creator</h2>
+                <p class="leading-relaxed">Marcin Sawicki is a television journalist with interests in technology and applications of generative artificial intelligence. He created this tool as a prototype for voice-driven content generation.</p>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-medium mb-4 text-[#E8B931]">Technical Architecture</h2>
+                <p class="leading-relaxed mb-4">The tool integrates multiple components to enable voice-controlled web page generation:</p>
+                <ul class="list-disc list-inside space-y-2 text-gray-300">
+                    <li>Eleven Labs voice agent for speech processing</li>
+                    <li>Function Calling via Webhook for API communication</li>
+                    <li>Python Flask microserver for backend processing</li>
+                    <li>ngrok for secure tunneling</li>
+                    <li>Anthropic API (Claude Sonnet) for content generation</li>
+                    <li>GitHub repository for version control</li>
+                    <li>Vercel for deployment</li>
+                    <li>Mobile browser integration for photo uploads</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-medium mb-4 text-[#E8B931]">Use Cases</h2>
+                <p class="leading-relaxed mb-4">This prototype addresses the needs of professionals who have information in their minds and photos on their phones, but lack time to work at a computer. Voice replaces the keyboard, and the AI agent replaces manual programming.</p>
+                <div class="space-y-3 text-gray-300">
+                    <div class="border-l-2 border-[#E8B931] pl-4">
+                        <strong class="text-[#FAFAF5]">Real Estate Agent:</strong> Dictating property listings while on-site
+                    </div>
+                    <div class="border-l-2 border-[#E8B931] pl-4">
+                        <strong class="text-[#FAFAF5]">Event Organizer:</strong> Creating live reports during events
+                    </div>
+                    <div class="border-l-2 border-[#E8B931] pl-4">
+                        <strong class="text-[#FAFAF5]">Sales Representative:</strong> Updating content between meetings
+                    </div>
                 </div>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-medium mb-4 text-[#E8B931]">Contact</h2>
+                <p class="leading-relaxed">
+                    <a href="https://www.linkedin.com/in/msawicki/" class="text-[#E8B931] hover:underline">LinkedIn Profile: www.linkedin.com/in/msawicki/</a>
+                </p>
             </section>
         </main>
 
-        <footer class="border-t border-gray-700 pt-6 mt-12">
-            <div class="text-center text-gray-400 text-sm">
-                <p>This page was generated live by a voice AI agent</p>
-                <p>Generated: 2026-02-20 10:54:31</p>
-            </div>
+        <footer class="mt-16 pt-8 border-t border-gray-700 text-center text-sm text-gray-400">
+            <div>This page was generated live by a voice AI agent</div>
+            <div>Generated: 2026-02-20 11:00:18</div>
         </footer>
     </div>
 </body>
