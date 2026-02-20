@@ -3,100 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marcin Sawicki - Generatywna AI w Dziennikarstwie</title>
+    <title>Narzędzie do tworzenia stron internetowych za pomocą głosu</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
-        .bg-dark { background-color: #1A1A1A; }
-        .text-light { color: #FAFAF5; }
-        .text-accent { color: #E8B931; }
-        .border-accent { border-color: #E8B931; }
-        .bg-accent { background-color: #E8B931; }
     </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1A1A1A',
+                        text: '#FAFAF5',
+                        accent: '#E8B931'
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-dark text-light min-h-screen">
+<body class="bg-primary text-text min-h-screen">
     <div class="container mx-auto px-4 py-8 max-w-4xl">
-        
         <header class="mb-12">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4 text-accent">Innowacyjne Narzędzie AI</h1>
-            <p class="text-xl md:text-2xl font-light">Marcin Sawicki prezentuje przełomową technologię aktualizacji stron internetowych poprzez rozmowę z agentem głosowym</p>
+            <h1 class="text-3xl md:text-4xl font-bold text-center mb-2">Narzędzie do tworzenia stron internetowych za pomocą głosu</h1>
         </header>
 
         <section class="mb-12">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-                <img src="photos/photo-001.jpg" alt="Live photo 1" class="w-full h-48 object-cover rounded-lg">
-                <img src="photos/photo-002.jpeg" alt="Live photo 2" class="w-full h-48 object-cover rounded-lg">
-                <img src="photos/photo-003.jpeg" alt="Live photo 3" class="w-full h-48 object-cover rounded-lg">
+                <img src="photos/photo-001.jpg" alt="Zdjęcie z wydarzenia" class="w-full h-48 object-cover rounded-lg">
+                <img src="photos/photo-002.jpeg" alt="Zdjęcie z wydarzenia" class="w-full h-48 object-cover rounded-lg">
+                <img src="photos/photo-003.jpeg" alt="Zdjęcie z wydarzenia" class="w-full h-48 object-cover rounded-lg">
             </div>
-            <p class="text-sm text-gray-400 text-center italic">Live photos — uploaded during the event</p>
+            <p class="text-center text-sm text-gray-400 italic">Live photos — uploaded during the event</p>
         </section>
 
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-accent border-l-4 border-accent pl-4">O Marcinie Sawickim</h2>
-            <div class="space-y-4">
-                <p class="text-lg leading-relaxed">Marcin Sawicki to doświadczony dziennikarz fascynujący się możliwościami generatywnej inteligencji artificjalnej. Jego pasja do technologii zaowocowała stworzeniem innowacyjnego narzędzia, które rewolucjonizuje sposób aktualizacji treści internetowych.</p>
-                <p class="text-lg leading-relaxed">Opracowane przez niego rozwiązanie umożliwia aktualizację stron internetowych w czasie rzeczywistym poprzez rozmowę z agentem głosowym, z automatycznym dodawaniem zdjęć bezpośrednio z telefonu. To przełomowe podejście idealnie sprawdza się w pracy dziennikarskiej, gdzie szybkość i efektywność są kluczowe.</p>
-            </div>
-        </section>
+        <main class="space-y-8">
+            <section>
+                <h2 class="text-2xl font-semibold mb-4 text-accent">Cel i zastosowanie</h2>
+                <p class="text-lg leading-relaxed mb-4">
+                    Narzędzie umożliwia szybkie tworzenie stron internetowych za pomocą poleceń głosowych. 
+                    Rozwiązanie jest przeznaczone dla osób, które posiadają informacje oraz zdjęcia w urządzeniach mobilnych, 
+                    ale nie mają czasu na tradycyjną pracę przy komputerze.
+                </p>
+            </section>
 
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-accent border-l-4 border-accent pl-4">Technologia</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <section>
+                <h2 class="text-2xl font-semibold mb-4 text-accent">Grupa docelowa</h2>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <h3 class="text-xl font-medium mb-3 text-accent">Agenci nieruchomości</h3>
+                        <p class="text-gray-300">
+                            Mogą dyktować opisy ofert nieruchomości, dodawać zdjęcia obiektów i tworzyć 
+                            prezentacje bez konieczności korzystania z klawiatury.
+                        </p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <h3 class="text-xl font-medium mb-3 text-accent">Organizatorzy eventów</h3>
+                        <p class="text-gray-300">
+                            Tworzą relacje na żywo z wydarzeń, dokumentują przebieg imprez 
+                            i publikują materiały w czasie rzeczywistym.
+                        </p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <h3 class="text-xl font-medium mb-3 text-accent">Handlowcy</h3>
+                        <p class="text-gray-300">
+                            Przygotowują materiały promocyjne między spotkaniami z klientami, 
+                            aktualizują oferty i katalogi produktów.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-semibold mb-4 text-accent">Sposób działania</h2>
                 <div class="bg-gray-800 p-6 rounded-lg">
-                    <h3 class="text-xl font-semibold mb-3 text-accent">Frontend & Interface</h3>
-                    <ul class="space-y-2">
-                        <li>• Agent konwersacyjny Eleven Labs</li>
-                        <li>• Mobilna przeglądarka do uploadu zdjęć</li>
-                        <li>• Vercel z automatycznym deploymentem</li>
-                    </ul>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-lg font-medium mb-3">Tradycyjny proces</h3>
+                            <ul class="space-y-2 text-gray-300">
+                                <li>• Konieczność korzystania z klawiatury</li>
+                                <li>• Potrzeba znajomości programowania</li>
+                                <li>• Długi czas tworzenia treści</li>
+                                <li>• Praca przy komputerze stacjonarnym</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-medium mb-3">Nowe rozwiązanie</h3>
+                            <ul class="space-y-2 text-gray-300">
+                                <li>• Głos zastępuje klawiaturę</li>
+                                <li>• Agent AI zastępuje programistę</li>
+                                <li>• Szybkie tworzenie treści</li>
+                                <li>• Praca mobilna z telefonu</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-gray-800 p-6 rounded-lg">
-                    <h3 class="text-xl font-semibold mb-3 text-accent">Backend & Processing</h3>
-                    <ul class="space-y-2">
-                        <li>• Flask & Python</li>
-                        <li>• Lokalny mikroserwer z webhookami</li>
-                        <li>• ngrok do tunelowania</li>
-                        <li>• Anthropic API do generowania HTML</li>
-                        <li>• Git.ab repository</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-accent border-l-4 border-accent pl-4">Kluczowe Cechy</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="text-center p-6 border border-accent rounded-lg">
-                    <h3 class="text-xl font-semibold mb-3 text-accent">Prototypowe</h3>
-                    <p>Narzędzie znajduje się w fazie prototypu, stale rozwijane i udoskonalane</p>
+            <section>
+                <h2 class="text-2xl font-semibold mb-4 text-accent">Funkcjonalności</h2>
+                <div class="space-y-4">
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-accent w-3 h-3 rounded-full mt-2 flex-shrink-0"></div>
+                        <div>
+                            <h3 class="font-medium mb-1">Rozpoznawanie mowy</h3>
+                            <p class="text-gray-300">Konwersja poleceń głosowych na instrukcje tworzenia strony internetowej</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-accent w-3 h-3 rounded-full mt-2 flex-shrink-0"></div>
+                        <div>
+                            <h3 class="font-medium mb-1">Integracja ze zdjęciami</h3>
+                            <p class="text-gray-300">Automatyczne dodawanie zdjęć z urządzeń mobilnych do tworzonej strony</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-accent w-3 h-3 rounded-full mt-2 flex-shrink-0"></div>
+                        <div>
+                            <h3 class="font-medium mb-1">Generowanie na żywo</h3>
+                            <p class="text-gray-300">Tworzenie gotowych stron HTML w czasie rzeczywistym podczas dyktowania</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="text-center p-6 border border-accent rounded-lg">
-                    <h3 class="text-xl font-semibold mb-3 text-accent">Szybkie</h3>
-                    <p>Idealne dla osób pracujących w dynamicznym, szybkim tempie</p>
-                </div>
-                <div class="text-center p-6 border border-accent rounded-lg">
-                    <h3 class="text-xl font-semibold mb-3 text-accent">Intuicyjne</h3>
-                    <p>Aktualizacja treści poprzez naturalną rozmowę głosową</p>
-                </div>
-            </div>
-        </section>
+            </section>
+        </main>
 
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-accent border-l-4 border-accent pl-4">Przyszłość Dziennikarstwa</h2>
-            <div class="bg-gray-800 p-8 rounded-lg">
-                <p class="text-lg leading-relaxed mb-4">Narzędzie Marcina Sawickiego reprezentuje przyszłość dziennikarstwa cyfrowego, gdzie technologia AI wspomaga twórców treści w ich codziennej pracy. Połączenie sztucznej inteligencji z praktycznymi potrzebami dziennikarzy otwiera nowe możliwości w zakresie szybkiego i efektywnego publikowania treści.</p>
-                <p class="text-lg leading-relaxed">To rozwiązanie pokazuje, jak generatywna AI może być wykorzystana nie tylko do tworzenia treści, ale także do całkowicie nowego podejścia do zarządzania i aktualizacji informacji w czasie rzeczywistym.</p>
-            </div>
-        </section>
-
+        <footer class="mt-16 pt-8 border-t border-gray-700 text-center text-sm text-gray-400">
+            <p>This page was generated live by a voice AI agent</p>
+            <p>Generated: 2026-02-20 10:51:42</p>
+        </footer>
     </div>
-
-    <footer class="mt-16 py-8 border-t border-gray-700 text-center">
-        <div class="container mx-auto px-4">
-            <p class="text-sm text-gray-400 mb-1">This page was generated live by an AI voice agent during the event</p>
-            <p class="text-sm text-gray-400">Generated: 2026-02-20 10:37:08</p>
-        </div>
-    </footer>
 </body>
 </html>
